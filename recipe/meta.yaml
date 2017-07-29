@@ -1,6 +1,6 @@
 {% set name = "HoloPy" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "fecfcdd3fb46de5b03db7ee53fa9ef6463eb75a1889143578b51707ecaeb878e" %}
+{% set version = "3.1.0" %}
+{% set sha256 = "NEED TO UPDATE HASH AFTER GITHUB RELEASE" %}
 
 package:
   name: {{ name|lower }}
