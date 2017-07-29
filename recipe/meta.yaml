@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/barkls/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/barkls/holopy/archive/v3.1.tar.gz
   sha256: {{ sha256 }}
 
 build:
