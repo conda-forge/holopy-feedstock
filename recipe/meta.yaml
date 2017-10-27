@@ -19,14 +19,14 @@ build:
 requirements:
   build:
     - python
-    - numpy x.x
+    - numpy 1.12.*
     - setuptools
     - gcc
     - toolchain3
 
   run:
     - python
-    - numpy x.x
+    - numpy >=1.12
     - scipy
     - pyyaml
     - pillow
