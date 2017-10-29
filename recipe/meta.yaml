@@ -1,6 +1,6 @@
 {% set name = "HoloPy" %}
-{% set version = "3.1.1" %}
-{% set sha256 = "fa102ec14e931865848c5c23f201aa7b0a88d7e7d89382650ab285dcd7a3c502" %}
+{% set version = "3.1.2" %}
+{% set sha256 = "34da9f804daead4488936111200538d2f0f38375648869dd6cab541062cc0f04" %}
 
 package:
   name: {{ name|lower }}
@@ -19,14 +19,14 @@ build:
 requirements:
   build:
     - python
-    - numpy x.x
+    - numpy 1.12.*
     - setuptools
     - gcc
     - toolchain3
 
   run:
     - python
-    - numpy x.x
+    - numpy >=1.12
     - scipy
     - pyyaml
     - pillow
