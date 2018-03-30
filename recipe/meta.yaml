@@ -12,21 +12,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [py2k or win]
+  number: 1
+  skip: True  # [py2k or win32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
-    - numpy 1.12.*
+    - numpy 1.12.* # [not win]
+    - numpy 1.14.* # [win]
     - setuptools
-    - gcc
+    - gcc # [not win]
     - toolchain3
+    - flang # [win]
 
   run:
     - python
-    - numpy >=1.12
+    - numpy >=1.12 # [not win]
+    - numpy >=1.14 # [win]
     - scipy
     - pyyaml
     - pillow
@@ -37,6 +40,7 @@ requirements:
     - h5netcdf
     - libgcc  # [linux]
     - libgfortran  # [osx]
+    - libflang # [win]
     
 test:
   imports:
