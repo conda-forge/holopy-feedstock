@@ -19,17 +19,17 @@ build:
 requirements:
   build:
     - python
-    - numpy 1.12.* # [not win]
-    - numpy 1.14.* # [win]
+    - numpy 1.12.*  # [not win]
+    - numpy 1.14.*  # [win]
     - setuptools
-    - gcc # [not win]
+    - gcc  # [not win]
     - toolchain3
-    - flang # [win]
+    - flang  # [win]
 
   run:
     - python
-    - numpy >=1.12 # [not win]
-    - numpy >=1.14 # [win]
+    - numpy >=1.12  # [not win]
+    - numpy >=1.14  # [win]
     - scipy
     - pyyaml
     - pillow
@@ -40,7 +40,7 @@ requirements:
     - h5netcdf
     - libgcc  # [linux]
     - libgfortran  # [osx]
-    - libflang # [win]
+    - libflang  # [win]
     
 test:
   imports:
