@@ -1,7 +1,7 @@
 {% set name = "HoloPy" %}
 {% set version = "3.1.2" %}
-{% set sha256 = "34da9f804daead4488936111200538d2f0f38375648869dd6cab541062cc0f04" %}  # [not win]
-{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}  # [win]
+{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}
+{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}
 
 {% set version ="win_" ~ version %}  # [win]
 
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py2k or win32]
 
 requirements:
