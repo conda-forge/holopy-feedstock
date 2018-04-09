@@ -1,6 +1,9 @@
 {% set name = "HoloPy" %}
-{% set version = "win1.0" %}
-{% set sha256 = "76223296154f11596863e66d42da9eda8298ad520d7c49d6c7b23f891669a839" %}
+{% set version = "3.1.2" %}
+{% set sha256 = "34da9f804daead4488936111200538d2f0f38375648869dd6cab541062cc0f04" %}  # [not win]
+{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}  # [win]
+
+{% set version ="win_" ~ version %}  # [win]
 
 package:
   name: {{ name|lower }}
@@ -8,7 +11,7 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/barkls/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/manoharan-lab/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
