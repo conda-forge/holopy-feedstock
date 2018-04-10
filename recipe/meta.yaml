@@ -1,9 +1,6 @@
 {% set name = "HoloPy" %}
 {% set version = "3.1.2" %}
-{% set sha256 = "34da9f804daead4488936111200538d2f0f38375648869dd6cab541062cc0f04" %}  # [not win]
-{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}  # [win]
-
-{% set version ="win_" ~ version %}  # [win]
+{% set sha256 = "2a18ddee9c1b04a4cd736b554824fda73b0b686fa71ffbe179350c7ecc8d82b0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,27 +8,24 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/manoharan-lab/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/manoharan-lab/{{ name }}/archive/win_{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [py2k or win32]
+  number: 0
+  skip: True  # [py2k or not win64]
 
 requirements:
   build:
     - python
-    - numpy 1.12.*  # [not win]
-    - numpy 1.14.*  # [win]
+    - numpy 1.14.*
     - setuptools
-    - gcc  # [not win]
     - toolchain3
-    - flang  # [win]
+    - flang
 
   run:
     - python
-    - numpy >=1.12  # [not win]
-    - numpy >=1.14  # [win]
+    - numpy >=1.14
     - scipy
     - pyyaml
     - pillow
@@ -40,8 +34,6 @@ requirements:
     - matplotlib
     - xarray >=0.9.5
     - h5netcdf
-    - libgcc  # [linux]
-    - libgfortran  # [osx]
     - libflang  # [win]
     
 test:
