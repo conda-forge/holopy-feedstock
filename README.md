@@ -18,14 +18,16 @@ digital holograms to measure particle parameters. HoloPy is free and open source
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/holopy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/holopy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/holopy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/holopy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/holopy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/holopy-feedstock/branch/windows)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/holopy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/holopy-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/holopy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/holopy-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/holopy/badges/version.svg)](https://anaconda.org/conda-forge/holopy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/holopy/badges/downloads.svg)](https://anaconda.org/conda-forge/holopy)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-holopy-green.svg)](https://anaconda.org/conda-forge/holopy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/holopy.svg)](https://anaconda.org/conda-forge/holopy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/holopy.svg)](https://anaconda.org/conda-forge/holopy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/holopy.svg)](https://anaconda.org/conda-forge/holopy) |
 
 Installing holopy
 =================
