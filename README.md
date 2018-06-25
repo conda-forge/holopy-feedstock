@@ -20,7 +20,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/holopy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/holopy-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/holopy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/holopy-feedstock)
-[![Windows](https://ci.appveyor.com/api/projects/status/github/conda-forge/holopy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/holopy-feedstock/branch/windows)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/holopy-feedstock/windows.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/holopy-feedstock/branch/windows)
 
 Current release info
 ====================
