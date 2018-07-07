@@ -12,21 +12,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k or win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+  host:
     - python
-    - numpy 1.12.*
+    - numpy
     - setuptools
-    - gcc
     - toolchain3
 
   run:
     - python
-    - numpy >=1.12
+    - {{ pin_compatible('numpy') }}
     - scipy
     - pyyaml
     - pillow
@@ -35,9 +37,7 @@ requirements:
     - matplotlib
     - xarray >=0.10.0
     - h5netcdf
-    - libgcc  # [linux]
-    - libgfortran  # [osx]
-    
+
 test:
   imports:
     - holopy
@@ -49,7 +49,7 @@ about:
   summary: 'Holopy is a python based tool for working with digital holograms and light scattering'
 
   description: |
-    HoloPy is a software package for computational light scattering and digital holography. 
+    HoloPy is a software package for computational light scattering and digital holography.
     It has tools for managing data and metadata, doing reconstructions, computing light scattering
     from micron scale particles or clusters of such particles, and fitting scattering models to
     digital holograms to measure particle parameters. HoloPy is free and open source software (GPL v3).
