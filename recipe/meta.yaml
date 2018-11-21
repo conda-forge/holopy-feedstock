@@ -18,12 +18,13 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+  host:
     - python
     - numpy 1.12.*
     - setuptools
-    - gcc
-    - toolchain3
-
   run:
     - python
     - numpy >=1.12
@@ -35,8 +36,6 @@ requirements:
     - matplotlib
     - xarray >=0.10.0
     - h5netcdf
-    - libgcc  # [linux]
-    - libgfortran  # [osx]
     
 test:
   imports:
