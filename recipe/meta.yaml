@@ -20,13 +20,12 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-    - make
   host:
     - python
     - pip
     - {{ pin_compatible('numpy') }}
     - setuptools
-    - gfortran
+    - gfortran  # [linux]
   run:
     - python
     - {{ pin_compatible('numpy') }}
