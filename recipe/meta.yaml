@@ -30,7 +30,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy < 1.2.0
+    - scipy <1.3.0
     - pyyaml
     - pillow
     - h5py
