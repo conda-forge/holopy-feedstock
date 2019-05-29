@@ -13,15 +13,13 @@ source:
 
 build:
   number: 1
-  skip: True  # [py2k or win]
+  skip: True  # [py2k]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
-    - make
   host:
     - python
     - pip
@@ -46,7 +44,7 @@ test:
 about:
   home: http://manoharan.seas.harvard.edu/holopy
   license: GPL v3
-  license_file: COPYING
+  license_file: LICENSE
   summary: 'Holopy is a python based tool for working with digital holograms and light scattering'
 
   description: |
