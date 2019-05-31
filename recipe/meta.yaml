@@ -12,15 +12,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py2k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: 
+    - "{{ PYTHON }} setup.py build_ext"
+    - "{{ PYTHON }} -m pip install . --disable-pip-version-check --no-deps --ignore-installed --no-cache-dir --no-build-isolation -vvv"
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-    - flang  # [win]
   host:
     - python
     - pip
