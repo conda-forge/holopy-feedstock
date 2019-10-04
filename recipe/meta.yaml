@@ -20,15 +20,14 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }} # [not win]
-    - {{ compiler('python_c') }} # [win]
-    - {{ compiler('fortran') }} # [not win]
-    - {{ compiler('python_fortran') }} # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - python
     - pip
     - {{ pin_compatible('numpy') }}
     - setuptools
+    - m2w64-toolchain # [win]
   run:
     - python
     - {{ pin_compatible('numpy') }}
