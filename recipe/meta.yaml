@@ -23,8 +23,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-    - {{ compiler('gcc_win')}} # [win]
-    - {{ compiler('gfortran_win')}} # [win]
+    - {{ compiler('m2w64-gcc')}} # [win]
+    - {{ compiler('m2w64-gcc-fortran')}} # [win]
   host:
     - python
     - pip
