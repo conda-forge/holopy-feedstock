@@ -1,14 +1,15 @@
-{% set name = "HoloPy" %}
-{% set version = "3.3test" %}
-{% set sha256 = "b5244e290d8e43d2d2250d06f2be3078a2aecb72c690a4105d13aa80da51dd71" %}
+{% set name = "holopy" %}
+{% set repo = "ralex0"}
+{% set branch = "master" %}
+{% set sha256 = "662a2d97cfd80f6835431e0f13baff22e92e813af63d067277a5a0805485d26e" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: {{ branch }}
 
 source:
-  fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/barkls/{{ name }}/archive/{{ version }}.tar.gz
+  fn: {{ name|lower }}-{{ branch }}.tar.gz
+  url: https://github.com/{{ repo }}/{{ name }}/archive/{{ branch }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -59,5 +60,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - ralex0
     - barkls
     - vnmanoharan
