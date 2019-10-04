@@ -1,11 +1,2 @@
-channels:
-  sources:
-    - conda-forge
-    - defaults
-    - ralex0
-
-python_c_compiler:
-  - m2w64-gcc
-
-python_fortran_compiler:
-  - m2w64-gcc-fortran
+channel_sources:
+- conda-forge,defaults,ralex0
