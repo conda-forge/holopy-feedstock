@@ -21,8 +21,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }} # [not win]
-    - {{ compiler('fortran') }} # [not win]
+    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - python
     - pip
