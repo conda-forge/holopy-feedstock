@@ -1,5 +1,11 @@
-c_compiler:
-  - gcc
+channels:
+  sources:
+    - conda-forge
+    - defaults
+    - ralex0
 
-fortran_compiler:
-  - gfortran
+gcc_win_compiler:
+  - m2w64-gcc_win-64
+
+gfortran_win_compiler:
+  - m2w64-gcc-fortran_win-64
