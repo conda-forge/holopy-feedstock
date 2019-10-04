@@ -1,4 +1,5 @@
-c_compiler:
-- gcc
-fortran_compiler:
-- gfortran
+python_c_compiler:
+  - gcc
+
+python_fortran_compiler:
+  - gfortran
