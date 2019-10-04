@@ -16,7 +16,7 @@ build:
   number: 2
   skip: True  # [py2k]
   script:
-    - "{{ PYTHON }} setup.py install" build_ext
+    - "{{ PYTHON }} setup.py install build_ext"
     - "{{ PYTHON }} -m pip install . --disable-pip-version-check --no-deps --ignore-installed --no-cache-dir --no-build-isolation -vvv"
 
 requirements:
