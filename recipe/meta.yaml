@@ -1,11 +1,11 @@
 {% set name = "holopy" %}
 {% set repo = "ralex0" %}
-{% set branch = "fix-fortran-win" %}
-{% set sha256 = "04117e0b3817c124b98ecce23d0f3032feefb1a3666ffb5790092cbee0074d8d" %}
+{% set branch = "master" %}
+{% set sha256 = "74834614bc231ce37bd2e3673bda4e53d733342ed4d48164105f4d55278af3f6" %}
 
 package:
   name: {{ name|lower }}
-  version: 3.3win # {{ branch }}
+  version: {{ branch }}
 
 source:
   fn: {{ name|lower }}-{{ branch }}.tar.gz
@@ -15,7 +15,8 @@ source:
 build:
   number: 0
   skip: True  # [py2k]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script:
+    - "{{ PYTHON }} setup.py install"
 
 requirements:
   build:
@@ -31,7 +32,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy
+    - scipy <1.3.0
     - pyyaml
     - pillow
     - h5py
