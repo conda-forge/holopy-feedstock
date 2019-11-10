@@ -1,11 +1,11 @@
 {% set name = "holopy" %}
 {% set repo = "ralex0" %}
-{% set branch = "master" %}
-{% set sha256 = "662a2d97cfd80f6835431e0f13baff22e92e813af63d067277a5a0805485d26e" %}
+{% set branch = "fix-fortran-win" %}
+{% set sha256 = "04117e0b3817c124b98ecce23d0f3032feefb1a3666ffb5790092cbee0074d8d" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ branch }}
+  version: 3.3win # {{ branch }}
 
 source:
   fn: {{ name|lower }}-{{ branch }}.tar.gz
@@ -13,23 +13,21 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [py2k]
-  script:
-    - "{{ PYTHON }} setup.py install build_ext"
-    - "{{ PYTHON }} -m pip install . --disable-pip-version-check --no-deps --ignore-installed --no-cache-dir --no-build-isolation -vvv"
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('fortran') }}
-    - {{ compiler('m2w64-gcc') }} # [win]
-    - {{ compiler('m2w64-gcc-fortran') }} # [win]
+    - {{ compiler('fortran') }} # [not win]
   host:
     - python
     - pip
     - {{ pin_compatible('numpy') }}
     - setuptools
+    - m2w64-toolchain # [win]
+    - nose
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -44,6 +42,9 @@ requirements:
 test:
   imports:
     - holopy
+    - holopy.scattering.theory.mie_f.mieangfuncs
+    - holopy.scattering.theory.mie_f.scsmfo_min
+    - holopy.scattering.theory.tmatrix
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
