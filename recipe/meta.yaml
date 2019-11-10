@@ -5,7 +5,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ branch }}
+  version: 3.3win # {{ branch }}
 
 source:
   fn: {{ name|lower }}-{{ branch }}.tar.gz
