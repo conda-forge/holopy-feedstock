@@ -27,6 +27,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - setuptools
     - m2w64-toolchain # [win]
+    - nose
   run:
     - python
     - {{ pin_compatible('numpy') }}
