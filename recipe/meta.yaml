@@ -15,7 +15,7 @@ source:
 build:
   number: 0
   skip: True  # [py2k]
-  script: "pip install ."
+  script: "{{ PYTHON }} setup.py install"
 
 requirements:
   build:
