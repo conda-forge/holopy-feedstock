@@ -1,7 +1,7 @@
 {% set name = "holopy" %}
 {% set repo = "ralex0" %}
 {% set branch = "master" %}
-{% set sha256 = "b4fe3ca671b1ec5dfec8da9093ba5a1f3b60198de001b0fba0b3820d89a5e579" %}
+{% set sha256 = "94cbda447d348705a1610fb50c31cb2bbd03d9f3fcad66d3b99aad23a121359c" %}
 
 package:
   name: {{ name|lower }}
