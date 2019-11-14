@@ -36,7 +36,7 @@ requirements:
     - pillow
     - h5py
     - matplotlib
-    - xarray >=0.10.0
+    - xarray
     - h5netcdf
 
 test:
