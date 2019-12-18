@@ -1,6 +1,7 @@
-{% set name = "HoloPy" %}
-{% set version = "3.2.1" %}
-{% set sha256 = "6994fb24ef20dabdb016ee0e624e474507f5abd48c6135837b09ccccc5b6ee77" %}
+{% set name = "holopy" %}
+{% set repo = "manoharan-lab" %}
+{% set version = "3.3.0" %}
+{% set sha256 = "66f61c07cb916d8f77254361bc3e77b07df77b1934306665ac9f3d271bd267f5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,48 +9,51 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/manoharan-lab/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/{{ repo }}/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [py2k or win]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  skip: True  # [py2k]
+  script: "{{ PYTHON }} setup.py install"
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}  # [not win]
+  host:
     - python
-    - numpy 1.12.*
+    - pip
+    - {{ pin_compatible('numpy') }}
     - setuptools
-    - gcc
-    - toolchain3
-
+    - m2w64-toolchain  # [win]
+    - nose
   run:
     - python
-    - numpy >=1.12
+    - {{ pin_compatible('numpy') }}
     - scipy
-    - pyyaml
+    - pyyaml <5.2
     - pillow
     - h5py
-    - emcee
     - matplotlib
-    - xarray >=0.10.0
+    - xarray
     - h5netcdf
-    - libgcc  # [linux]
-    - libgfortran  # [osx]
-    
+
 test:
   imports:
     - holopy
+    - holopy.scattering.theory.mie_f.mieangfuncs
+    - holopy.scattering.theory.mie_f.scsmfo_min
+    - holopy.scattering.theory.tmatrix
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
   license: GPL v3
-  license_file: COPYING
+  license_file: LICENSE
   summary: 'Holopy is a python based tool for working with digital holograms and light scattering'
 
   description: |
-    HoloPy is a software package for computational light scattering and digital holography. 
+    HoloPy is a software package for computational light scattering and digital holography.
     It has tools for managing data and metadata, doing reconstructions, computing light scattering
     from micron scale particles or clusters of such particles, and fitting scattering models to
     digital holograms to measure particle parameters. HoloPy is free and open source software (GPL v3).
@@ -58,5 +62,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - ralex0
     - barkls
     - vnmanoharan
