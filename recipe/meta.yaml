@@ -1,15 +1,15 @@
 {% set name = "holopy" %}
-{% set repo = "ralex0" %}
-{% set branch = "master" %}
-{% set sha256 = "94cbda447d348705a1610fb50c31cb2bbd03d9f3fcad66d3b99aad23a121359c" %}
+{% set repo = "manoharan-lab" %}
+{% set version = "3.3.0" %}
+{% set sha256 = "66f61c07cb916d8f77254361bc3e77b07df77b1934306665ac9f3d271bd267f5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ branch }}
 
 source:
-  fn: {{ name|lower }}-{{ branch }}.tar.gz
-  url: https://github.com/{{ repo }}/{{ name }}/archive/{{ branch }}.tar.gz
+  fn: {{ name|lower }}-{{ version }}.tar.gz
+  url: https://github.com/{{ repo }}/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
