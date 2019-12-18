@@ -7,7 +7,7 @@ __migrator:
     - vc
     - cxx_compiler
   migration_number:  # Only use this if the bot messes up, putting this in will cause a complete rerun of the migration
-    1 
+    2 
   bump_number: 0
 
 python:
