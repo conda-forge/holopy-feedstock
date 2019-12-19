@@ -45,7 +45,7 @@ test:
     - holopy
     - holopy.scattering.theory.mie_f.mieangfuncs
     - holopy.scattering.theory.mie_f.scsmfo_min
-    - holopy.scattering.theory.tmatrix_f.S.ampld
+    - holopy.scattering.theory.tmatrix_f.S
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
