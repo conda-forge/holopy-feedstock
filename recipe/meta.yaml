@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
@@ -38,13 +38,14 @@ requirements:
     - matplotlib
     - xarray
     - h5netcdf
+    - emcee >=3.0.0
 
 test:
   imports:
     - holopy
     - holopy.scattering.theory.mie_f.mieangfuncs
     - holopy.scattering.theory.mie_f.scsmfo_min
-    - holopy.scattering.theory.tmatrix
+    - holopy.scattering.theory.tmatrix_f.S
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
