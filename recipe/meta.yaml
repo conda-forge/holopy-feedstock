@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
@@ -31,7 +31,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy
+    - scipy <1.4
     - pyyaml <5.2
     - pillow
     - h5py
