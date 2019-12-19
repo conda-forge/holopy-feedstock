@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
@@ -44,7 +44,7 @@ test:
     - holopy
     - holopy.scattering.theory.mie_f.mieangfuncs
     - holopy.scattering.theory.mie_f.scsmfo_min
-    - holopy.scattering.theory.tmatrix
+    - holopy.scattering.theory.tmatrix_f.S.ampld
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
