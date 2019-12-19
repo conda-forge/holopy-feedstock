@@ -38,6 +38,7 @@ requirements:
     - matplotlib
     - xarray
     - h5netcdf
+    - emcee >=3.0.0
 
 test:
   imports:
