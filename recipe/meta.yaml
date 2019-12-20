@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
@@ -38,7 +38,6 @@ requirements:
     - matplotlib
     - xarray
     - h5netcdf
-    - emcee >=3.0.0
 
 test:
   imports:
