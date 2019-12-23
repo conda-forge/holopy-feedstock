@@ -1,7 +1,7 @@
 {% set name = "holopy" %}
 {% set repo = "manoharan-lab" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "66f61c07cb916d8f77254361bc3e77b07df77b1934306665ac9f3d271bd267f5" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "991281e8502e5f8957721e9e3200d9e424ab884ed5db9989e5a8d85a00afcc40" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
