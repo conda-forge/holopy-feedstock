@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script: "{{ PYTHON }} setup.py install"
 
@@ -35,7 +35,7 @@ requirements:
     - pyyaml <5.2
     - pillow
     - h5py
-    - matplotlib
+    - matplotlib-base
     - xarray
     - h5netcdf
 
