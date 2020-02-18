@@ -35,7 +35,6 @@ requirements:
     - pyyaml <5.2
     - pillow
     - h5py
-    - matplotlib-base
     - xarray
     - h5netcdf
 
