@@ -47,7 +47,7 @@ test:
 
 about:
   home: http://manoharan.seas.harvard.edu/holopy
-  license: GPL v3
+  license: GPL-3.0
   license_file: LICENSE
   summary: 'Holopy is a python based tool for working with digital holograms and light scattering'
 
