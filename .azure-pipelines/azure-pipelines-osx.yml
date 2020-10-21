@@ -8,6 +8,9 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
+      osx_64_fortran_compiler_version7python3.6.____73_pypy:
+        CONFIG: osx_64_fortran_compiler_version7python3.6.____73_pypy
+        UPLOAD_PACKAGES: 'True'
       osx_64_fortran_compiler_version7python3.6.____cpython:
         CONFIG: osx_64_fortran_compiler_version7python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -16,6 +19,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_fortran_compiler_version7python3.8.____cpython:
         CONFIG: osx_64_fortran_compiler_version7python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_fortran_compiler_version9python3.6.____73_pypy:
+        CONFIG: osx_64_fortran_compiler_version9python3.6.____73_pypy
         UPLOAD_PACKAGES: 'True'
       osx_64_fortran_compiler_version9python3.6.____cpython:
         CONFIG: osx_64_fortran_compiler_version9python3.6.____cpython
