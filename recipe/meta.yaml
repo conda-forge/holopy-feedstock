@@ -37,6 +37,7 @@ requirements:
     - h5py
     - xarray
     - h5netcdf
+    - pandas
 
 test:
   imports:
