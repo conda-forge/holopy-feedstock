@@ -1,7 +1,7 @@
 {% set name = "holopy" %}
 {% set repo = "manoharan-lab" %}
-{% set version = "3.4.0" %}
-{% set sha256 = "efac38df58a9925e9cfaec11e895c0ac22a721e1162d44e1e26be56bb02d0f43" %}
+{% set version = "3.5.0" %}
+{% set sha256 = "bf86e3788e646ebb938f2607e82ad9e57f26be1ddb37e7a8388cf94c2dd8a834" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [py2k]
-  script: "{{ PYTHON }} setup.py install"
+  skip: true  # [py2k]
+  script: {{ PYTHON }} setup.py install
 
 requirements:
   build:
@@ -50,7 +50,7 @@ about:
   home: http://manoharan.seas.harvard.edu/holopy
   license: GPL-3.0
   license_file: LICENSE
-  summary: 'Holopy is a python based tool for working with digital holograms and light scattering'
+  summary: Holopy is a python based tool for working with digital holograms and light scattering
 
   description: |
     HoloPy is a software package for computational light scattering and digital holography.
