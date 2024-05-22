@@ -13,24 +13,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script: {{ PYTHON }} setup.py install
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}  # [not win]
   host:
     - python
     - pip
-    - {{ pin_compatible('numpy') }}
     - setuptools
     - m2w64-toolchain  # [win]
     - nose
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy
     - pyyaml
     - pillow
